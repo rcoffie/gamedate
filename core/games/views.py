@@ -10,5 +10,6 @@ r = requests.get(url)
 def home(request):
 
     data = json.loads(r.text)
+    # print(data)
     context = {'data':data}
     return render(request, 'games/home.html',context)
